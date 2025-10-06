@@ -79,6 +79,53 @@
       height: auto;
       display: block;
     }
+
+    form div, form fieldset {
+      margin-bottom: 1rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1rem;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.4rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 3px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #155ab6;
+    }
   </style>
 </head>
 <body>
@@ -96,6 +143,7 @@
       <li><a href="#testimonios">Testimonios</a></li>
       <li><a href="#datos">Datos adicionales</a></li>
       <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#formulario">Formulario</a></li>
       <li><a href="#referencias">Referencias</a></li>
     </ul>
   </nav>
@@ -105,14 +153,14 @@
     <h2>Información de contacto</h2>
     <p>Email: <strong>tucorreo@example.com</strong></p>
     <p>Teléfono: <strong>+593 123 456 789</strong></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener">linkedin.com/in/tuusuario</a></p>
   </div>
 
   <!-- Resumen -->
   <div id="resumen" class="section">
     <h2>Resumen</h2>
     <p>Estudiante de Ingeniería en Computación en la Escuela Superior Politécnica del Litoral (ESPOL), con interés en el desarrollo de software, videojuegos y diseño web. Apasionado por aprender nuevas tecnologías y aplicar la lógica computacional en proyectos reales.</p>
-    <p>También puedes ver mis proyectos en <a href="https://github.com/enriquerosado" target="_blank">mi cuenta de GitHub</a>.</p>
+    <p>También puedes ver mis proyectos en <a href="https://github.com/enriquerosado" target="_blank" rel="noopener">mi cuenta de GitHub</a>.</p>
   </div>
 
   <!-- Habilidades -->
@@ -239,15 +287,77 @@
 
     <!-- Video -->
     <h3>Video de presentación</h3>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-      title="Video de presentación de Enrique Rosado"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tl6u2NASUzU?si=BV3Ea0JdA3MIb_aG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <!-- Formulario -->
+  <section id="formulario" class="section">
+    <h2>Formulario de contacto</h2>
+
+    <form action="#" method="post">
+      <!-- Texto en una línea -->
+      <div>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+      </div>
+
+      <!-- Lista desplegable -->
+      <div>
+        <label for="pais">País de residencia:</label>
+        <select id="pais" name="pais" required>
+          <option value="">Seleccione un país</option>
+          <option value="ecuador">Ecuador</option>
+          <option value="mexico">México</option>
+          <option value="argentina">Argentina</option>
+          <option value="colombia">Colombia</option>
+        </select>
+      </div>
+
+      <!-- Selección única -->
+      <fieldset>
+        <legend>Género:</legend>
+        <div>
+          <input type="radio" id="genero-m" name="genero" value="masculino" required />
+          <label for="genero-m">Masculino</label>
+        </div>
+        <div>
+          <input type="radio" id="genero-f" name="genero" value="femenino" />
+          <label for="genero-f">Femenino</label>
+        </div>
+        <div>
+          <input type="radio" id="genero-o" name="genero" value="otro" />
+          <label for="genero-o">Otro</label>
+        </div>
+      </fieldset>
+
+      <!-- Selección múltiple -->
+      <fieldset>
+        <legend>Habilidades técnicas:</legend>
+        <div>
+          <input type="checkbox" id="hab-html" name="habilidades" value="html" />
+          <label for="hab-html">HTML</label>
+        </div>
+        <div>
+          <input type="checkbox" id="hab-css" name="habilidades" value="css" />
+          <label for="hab-css">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" id="hab-js" name="habilidades" value="javascript" />
+          <label for="hab-js">JavaScript</label>
+        </div>
+      </fieldset>
+
+      <!-- Área de texto -->
+      <div>
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escribe aquí tus comentarios..."></textarea>
+      </div>
+
+      <!-- Botón enviar -->
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
   </section>
 
   <!-- Referencias -->
@@ -258,5 +368,3 @@
 
 </body>
 </html>
-
-
