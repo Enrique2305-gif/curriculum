@@ -1,0 +1,202 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem 6rem;
+  background-color: #aca9a9;
+  color: #333;
+}
+
+h2 {
+  color: #1a1a1a;
+  text-align: center; 
+}
+
+h3 {
+  color: #1a1a1a;
+}
+
+h1 { 
+  text-align: center;             
+  color: #ffffff;
+  padding: 1.2rem 2rem;           
+  border: 3px solid #ffffff;      
+  border-radius: 10px;             
+  width: fit-content;             
+  margin: 1rem auto;               
+  font-size: 3rem;                 
+  font-weight: bold;               
+  letter-spacing: 1px;             
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  
+}
+
+.encabezado {
+  background-color: #1c3658; /* azul */
+  color: white; /* texto blanco */
+  text-align: center; /* centra el texto */
+  padding: 20px; /* espacio interno */
+  border-radius: 10px; /* bordes redondeados */
+  width: 80%; /* ancho del cuadro */
+  margin: 20px auto; /* centra horizontalmente */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* sombra elegante */
+}
+
+.encabezado h1 {
+  font-size: 2em; /* título más grande */
+  margin-bottom: 15px;
+}
+
+.encabezado nav ul {
+  list-style: none;            /* quita los puntos de lista */
+  display: flex;               /* activa flexbox */
+  justify-content: center;     /* centra los elementos horizontalmente */
+  flex-wrap: wrap;             /* permite que bajen de línea si no caben */
+  gap: 1rem;                   /* espacio entre los enlaces */
+  padding: 0;
+  margin: 0;
+}
+
+.encabezado nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.encabezado nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-decoration: underline;
+}
+
+.encabezado nav ul li a:hover {
+  color: #66aa96; 
+  margin: 20px auto;
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: #105cbe;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navegación */
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav li {
+  display: inline;
+  margin: 5px 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1rem 0;
+}
+
+
+/* Bloques de cita */
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #1a73e8;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Multimedia */
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Formularios */
+form div,
+form fieldset {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* Botón */
+button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #155ab6;
+}
