@@ -13,7 +13,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #1e3a5f, #2d5a8f);
+  background: linear-gradient(135deg, #112033, #112033);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -64,6 +64,8 @@ section {
   margin-bottom: 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  text-align: justify;
+  
 }
 
 .card:hover {
@@ -146,6 +148,47 @@ h3 {
 
 .testimonial-card {
   border-left: 4px solid #4a9d8e;
+}
+
+.educacion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; /* espacio entre columnas */
+}
+
+.edu-item {
+  background: #fff; /* opcional: fondo blanco */
+  padding: 0.5rem;
+  border-radius: 8px; /* esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra ligera */
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.habilidades-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem; /* espacio entre texto e imagen */
+}
+
+.habilidades-texto {
+  flex: 1; /* texto ocupa la mitad izquierda */
+}
+
+.habilidades-imagen {
+  flex: 1; /* imagen ocupa la mitad derecha */
+  display: flex;
+  justify-content: center;
+}
+
+.habilidades-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* opcional: esquinas redondeadas */
 }
 
 article {
@@ -234,9 +277,11 @@ iframe {
 
 img {
   border-radius: 0.75rem;
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 300px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: block;
+  margin: 0 auto;
 }
 
 /* Formulario */
