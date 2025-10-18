@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #d4d4d4;
   color: #333;
   line-height: 1.6;
 }
@@ -168,32 +168,51 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.habilidades-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem; /* espacio entre texto e imagen */
+#habilidades .card {
+  text-align: left;
 }
 
-.habilidades-texto {
-  flex: 1; /* texto ocupa la mitad izquierda */
+#habilidades p {
+  text-align: justify;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.columna h3 {
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+}
+
+.columna p, 
+.columna ul {
+  color: #333;
+  line-height: 1.6;
+}
+
+.columna ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
 }
 
 .habilidades-imagen {
-  flex: 1; /* imagen ocupa la mitad derecha */
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .habilidades-imagen img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* opcional: esquinas redondeadas */
+  width: 50%;       
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 article {
   font-style: italic;
-  color: #666;
+  color: #000000;
   margin-bottom: 1rem;
   line-height: 1.8;
 }
@@ -208,16 +227,75 @@ article {
   color: #666;
 }
 
-.year-badge {
-  display: inline-block;
-  background-color: #4a9d8e;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
+/* ====== SECCIÓN PROYECTOS ====== */
+#proyectos {
+  grid-area: proyectos;
+  padding: 20px;
 }
+
+#proyectos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3a5f;
+}
+
+#proyectos p {
+  text-align: justify;       /* texto justificado */
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.proyecto {
+  margin-bottom: 25px;       /* espacio entre proyectos */
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #f5f5f5; /* color de fondo suave */
+}
+
+.proyecto h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.proyecto a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.proyecto a:hover {
+  text-decoration: underline;
+}
+
+.proyecto-detalles {
+  list-style-type: disc;   /* viñetas normales */
+  margin: 10px 0 0 20px;   /* margen para que no quede pegado al texto */
+  padding: 0;
+}
+
+.proyecto-detalles li {
+  margin-bottom: 5px;     /* espacio entre elementos */
+}
+
+.proyecto-detalles a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.proyecto-detalles a:hover {
+  text-decoration: underline;
+}
+
+.year-badge {
+  display: inline-block;      
+  background-color: #0077cc;
+  color: white;
+  font-size: 0.8em;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin: 10px auto 0 auto; 
+}
+
+
 
 /* Listas */
 ul {
@@ -226,15 +304,17 @@ ul {
 
 ul li {
   margin-bottom: 0.5rem;
-  color: #666;
+  color: #000000;
 }
 
 /* Tabla */
 table {
-  width: 100%;
+  width: 1000px;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin: auto;  ;
+
 }
+
 
 thead {
   background: linear-gradient(135deg, #1e3a5f, #2d5a8f);
@@ -382,11 +462,6 @@ button:active {
   transform: translateY(0);
 }
 
-/* Alternancia de fondos */
-.bg-alternate {
-  background-color: #f0f7f9;
-  padding: 2rem 0;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
